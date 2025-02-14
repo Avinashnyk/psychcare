@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Questions</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white; /* White background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .questions-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            max-height: 80vh; /* Limit height to 80% of viewport */
+            overflow-y: auto; /* Add scroll if content overflows */
+        }
+        .questions-container h1 {
+            text-align: center;
+            font-size: 28px;
+            color: #003366; /* Darker blue */
+            margin-bottom: 20px;
+        }
+        .questions-container p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .questions-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #003366; /* Darker blue */
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .questions-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #003366; /* Darker blue */
+            border-radius: 5px;
+            font-size: 16px;
+            resize: vertical; /* Allow vertical resizing */
+        }
+        .questions-container button {
+            background-color: #003366; /* Darker blue */
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+        }
+        .questions-container button:hover {
+            background-color: #002244; /* Even darker blue */
+        }
+    </style>
+</head>
+<body>
+    <div class="questions-container">
+        <h1>Answer the following questions:</h1>
+        <form method="POST">
+            <!-- Existing questions (1-10) -->
+            <p>1. How often do you feel happy?</p>
+            <select name="q1" required>
+                <option value="always">Always</option>
+                <option value="often">Often</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="rarely">Rarely</option>
+                <option value="never">Never</option>
+            </select>
+
+            <p>2. How often do you feel stressed?</p>
+            <select name="q2" required>
+                <option value="always">Always</option>
+                <option value="often">Often</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="rarely">Rarely</option>
+                <option value="never">Never</option>
+            </select>
+
+            <p>3. How often do you exercise?</p>
+            <select name="q3" required>
+                <option value="always">Always</option>
+                <option value="often">Often</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="rarely">Rarely</option>
+                <option value="never">Never</option>
+            </select>
+
+            <p>4. How often do you get enough sleep?</p>
+            <select name="q4" required>
+                <option value="always">Always</option>
+                <option value="often">Often</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="rarely">Rarely</option>
+                <option value="never">Never</option>
+            </select>
+
+            <p>5. How often do you feel supported by others?</p>
+            <select name="q5" required>
+                <option value="always">Always</option>
+                <option value="often">Often</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="rarely">Rarely</option>
+                <option value="never">Never</option>
+            </select>
+
+            <p>6. How often do you practice mindfulness or meditation?</p>
+            <select name="q6" required>
+                <option value="always">Always</option>
+                <option value="often">Often</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="rarely">Rarely</option>
+                <option value="never">Never</option>
+            </select>
+
+            <p>7. How often do you feel overwhelmed?</p>
+            <select name="q7" required>
+                <option value="always">Always</option>
+                <option value="often">Often</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="rarely">Rarely</option>
+                <option value="never">Never</option>
+            </select>
+
+            <p>8. How often do you engage in hobbies or activities you enjoy?</p>
+            <select name="q8" required>
+                <option value="always">Always</option>
+                <option value="often">Often</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="rarely">Rarely</option>
+                <option value="never">Never</option>
+            </select>
+
+            <p>9. How often do you feel lonely?</p>
+            <select name="q9" required>
+                <option value="always">Always</option>
+                <option value="often">Often</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="rarely">Rarely</option>
+                <option value="never">Never</option>
+            </select>
+
+            <p>10. How often do you feel confident about yourself?</p>
+            <select name="q10" required>
+                <option value="always">Always</option>
+                <option value="often">Often</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="rarely">Rarely</option>
+                <option value="never">Never</option>
+            </select>
+
+            <!-- New descriptive question -->
+            <p>11. Describe your current feelings or situation in detail:</p>
+            <textarea name="q11" rows="5" placeholder="Write your thoughts here..." required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
